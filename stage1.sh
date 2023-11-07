@@ -16,6 +16,9 @@ sudo losetup -d $LOOP || true
 sudo rm -fR root kiss-chroot* kiss.img
 mkdir root
 
+export http_proxy=http://192.168.1.201:8080 ; export https_proxy=$http_
+proxy
+
 wget https://github.com/kisslinux/repo/releases/download/${VERSION}/kiss-chroot-${VERSION}.tar.xz
 
 wget https://github.com/kisslinux/repo/releases/download/${VERSION}/kiss-chroot-${VERSION}.tar.xz.sha256
